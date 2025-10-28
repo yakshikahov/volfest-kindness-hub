@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-volfest.jpg";
+import logoLight from "@/assets/volfest-logo-light.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -34,12 +35,19 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in-up">
         <div className="max-w-4xl mx-auto">
-          <p className="text-primary font-heading text-xl md:text-2xl mb-4 animate-fade-in">
+          <p className="text-primary font-heading text-xl md:text-2xl mb-6 animate-fade-in">
             India's Festival of Volunteering is Back!
           </p>
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-            <span className="text-gradient">VolFest 2025</span>
-          </h1>
+          
+          {/* Logo */}
+          <div className="mb-8 animate-scale-in">
+            <img 
+              src={logoLight} 
+              alt="VolFest - India's Volunteering Festival" 
+              className="h-24 md:h-32 lg:h-40 w-auto mx-auto"
+            />
+          </div>
+          
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8">
             Believe in Doing Good
           </h2>

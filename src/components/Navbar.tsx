@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoLight from "@/assets/volfest-logo-light.png";
+import logoDark from "@/assets/volfest-logo-dark.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,9 +43,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection("hero")}
-            className="font-heading text-2xl font-bold text-gradient"
+            className="flex items-center"
           >
-            VolFest 2025
+            <img 
+              src={logoLight} 
+              alt="VolFest - India's Volunteering Festival" 
+              className="h-12 md:h-14 w-auto transition-smooth hover:scale-105"
+            />
           </button>
 
           {/* Desktop Navigation */}

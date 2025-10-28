@@ -1,5 +1,6 @@
 import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoDark from "@/assets/volfest-logo-dark.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -14,7 +15,11 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <Heart className="w-16 h-16 mx-auto mb-4 text-primary" fill="currentColor" />
+            <img 
+              src={logoDark} 
+              alt="VolFest Logo" 
+              className="h-20 md:h-24 w-auto mx-auto mb-6 invert"
+            />
             <h3 className="font-heading text-3xl md:text-4xl font-bold mb-4">
               Be part of the celebration of kindness
             </h3>
