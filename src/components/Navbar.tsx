@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoLight from "@/assets/volfest-logo-light.png";
-import logoDark from "@/assets/volfest-logo-dark.png";
+import logo from "@/assets/volfest-logo-final.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +45,7 @@ const Navbar = () => {
             className="flex items-center"
           >
             <img 
-              src={logoLight} 
+              src={logo} 
               alt="VolFest - India's Volunteering Festival" 
               className="h-12 md:h-14 w-auto transition-smooth hover:scale-105"
             />

@@ -1,6 +1,5 @@
-import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoDark from "@/assets/volfest-logo-dark.png";
+import logo from "@/assets/volfest-logo-final.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -16,9 +15,9 @@ const Footer = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <img 
-              src={logoDark} 
+              src={logo} 
               alt="VolFest Logo" 
-              className="h-20 md:h-24 w-auto mx-auto mb-6 invert"
+              className="h-20 md:h-24 w-auto mx-auto mb-6 invert brightness-0"
             />
             <h3 className="font-heading text-3xl md:text-4xl font-bold mb-4">
               Be part of the celebration of kindness

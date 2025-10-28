@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-volfest.jpg";
-import logoLight from "@/assets/volfest-logo-light.png";
+import logo from "@/assets/volfest-logo-final.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -42,7 +42,7 @@ const Hero = () => {
           {/* Logo */}
           <div className="mb-8 animate-scale-in">
             <img 
-              src={logoLight} 
+              src={logo} 
               alt="VolFest - India's Volunteering Festival" 
               className="h-24 md:h-32 lg:h-40 w-auto mx-auto"
             />
