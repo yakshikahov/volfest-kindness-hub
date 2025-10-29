@@ -32,7 +32,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 gradient-subtle">
+    <section id="contact" className="py-20 md:py-32 bg-card/30 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
@@ -100,70 +100,16 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Registration Form */}
+            {/* Luma Registration */}
             <div className="bg-card rounded-3xl p-8 shadow-festival animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <h3 className="font-heading text-2xl font-bold mb-6">Register Now</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Full Name</label>
-                  <Input
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <Input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Phone</label>
-                  <Input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 XXXXX XXXXX"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">I'm registering as</label>
-                  <Select value={formData.type} onValueChange={(value) => setFormData({ ...formData, type: value })}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="participant">Participant/Attendee</SelectItem>
-                      <SelectItem value="ngo">NGO Partner</SelectItem>
-                      <SelectItem value="corporate">Corporate Partner</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message (Optional)</label>
-                  <Textarea
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Any questions or special requirements?"
-                    rows={4}
-                  />
-                </div>
-
-                <Button type="submit" variant="festival" className="w-full" size="lg">
-                  Complete Registration
-                </Button>
-              </form>
+              <h3 className="font-heading text-2xl font-bold mb-6">Register on Luma</h3>
+              <iframe 
+                src="https://lu.ma/embed/event/evt-d7T2CqS6okPMXby/simple" 
+                width="100%" 
+                height="600" 
+                frameBorder="0"
+                className="rounded-xl"
+              ></iframe>
             </div>
           </div>
         </div>

@@ -4,9 +4,15 @@ import festivalStalls from "@/assets/festival-stalls.jpg";
 import volunteersKids from "@/assets/volunteers-kids.jpg";
 import corporateVolunteers from "@/assets/corporate-volunteers.jpg";
 import unityHands from "@/assets/unity-hands.jpg";
+import foodSharing from "@/assets/volfest-food-sharing.jpg";
+import storiesWall from "@/assets/volfest-stories-wall.jpg";
+import performance from "@/assets/volfest-performance.jpg";
 
 const Gallery = () => {
   const images = [
+    { src: foodSharing, alt: "Volunteers sharing food and kindness" },
+    { src: storiesWall, alt: "VolFest Stories of Change wall" },
+    { src: performance, alt: "Cultural performance at VolFest" },
     { src: heroImage, alt: "Festival celebration with volunteers" },
     { src: volunteersAction, alt: "Volunteers planting trees" },
     { src: festivalStalls, alt: "Festival stalls and booths" },
@@ -16,7 +22,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-20 md:py-32 bg-background">
+    <section id="gallery" className="py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
@@ -45,9 +51,35 @@ const Gallery = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">
-              More photos and videos from VolFest 2024 & 2023
+            <p className="text-xl font-heading mb-6">
+              📹 Watch Our Journey
             </p>
+            <div className="flex flex-wrap gap-4 justify-center mb-8">
+              <a 
+                href="https://www.youtube.com/watch?v=Ap7lUBklc_g" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-primary/10 hover:bg-primary/20 rounded-full text-primary font-medium transition-smooth"
+              >
+                ▶️ VolFest 2025 Aftermovie
+              </a>
+              <a 
+                href="https://www.youtube.com/watch?v=Kifly31lP9k" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-secondary/10 hover:bg-secondary/20 rounded-full text-secondary font-medium transition-smooth"
+              >
+                ▶️ VolFest 2024 Aftermovie
+              </a>
+              <a 
+                href="https://img1.wsimg.com/blobby/go/667a94a2-24b1-48b1-a49d-1475281cc697/VolFest%20In%20a%20PDF.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-accent/10 hover:bg-accent/20 rounded-full text-accent font-medium transition-smooth"
+              >
+                📄 VolFest'24 Report (PDF)
+              </a>
+            </div>
             <p className="text-sm text-muted-foreground">
               Follow us on social media for the latest updates and highlights
             </p>
