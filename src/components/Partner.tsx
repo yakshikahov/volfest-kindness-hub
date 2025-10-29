@@ -48,7 +48,7 @@ const Partner = () => {
   ];
 
   return (
-    <section id="partner" className="py-20 md:py-32 gradient-subtle">
+    <section id="partner" className="py-20 md:py-32 bg-card/50 relative overflow-hidden glow-effect">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
@@ -62,7 +62,7 @@ const Partner = () => {
           </div>
 
           {/* Corporate Image */}
-          <div className="max-w-4xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-festival animate-scale-in">
+          <div className="max-w-4xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-card border border-primary/20 hover:border-primary/40 transition-smooth animate-scale-in">
             <img 
               src={corporateImage} 
               alt="Corporate volunteers team" 
@@ -77,7 +77,7 @@ const Partner = () => {
               return (
                 <div
                   key={index}
-                  className="bg-card rounded-2xl p-8 shadow-festival hover:shadow-glow transition-smooth hover:scale-105 animate-fade-in"
+                  className="bg-gradient-card rounded-2xl p-8 shadow-card border border-primary/10 hover:border-primary/30 hover:shadow-neon transition-bounce hover:scale-105 animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="w-14 h-14 rounded-full gradient-festival flex items-center justify-center mb-6">
@@ -95,7 +95,7 @@ const Partner = () => {
           </div>
 
           {/* Partnership Inquiry Form */}
-          <div className="bg-card rounded-3xl p-8 md:p-12 shadow-festival animate-fade-in">
+          <div className="bg-gradient-card rounded-3xl p-8 md:p-12 shadow-card border border-primary/20 animate-fade-in">
             <div className="text-center mb-8">
               <h3 className="font-heading text-3xl font-bold mb-4">
                 Let's Create Impact Together
@@ -103,7 +103,7 @@ const Partner = () => {
               <p className="text-muted-foreground mb-6">
                 Ready to partner? Fill out the form below or download our partnership deck.
               </p>
-              <Button variant="outline" className="gap-2">
+              <Button variant="outline" className="gap-2 border-primary/50 hover:border-primary hover:bg-primary/10 transition-bounce">
                 <Download className="w-4 h-4" />
                 Download Partner Deck
               </Button>

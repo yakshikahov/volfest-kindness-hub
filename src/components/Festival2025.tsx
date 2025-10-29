@@ -11,7 +11,7 @@ const Festival2025 = () => {
   };
 
   return (
-    <section id="festival" className="py-20 md:py-32 bg-background">
+    <section id="festival" className="py-20 md:py-32 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
@@ -25,7 +25,7 @@ const Festival2025 = () => {
               <img 
                 src={festivalImage} 
                 alt="Festival stalls and activities" 
-                className="w-full rounded-3xl shadow-festival"
+                className="w-full rounded-3xl shadow-card border border-primary/20 hover:scale-105 transition-bounce"
               />
             </div>
 
@@ -73,7 +73,7 @@ const Festival2025 = () => {
 
           {/* CTA Cards */}
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-card rounded-2xl p-8 shadow-festival hover:shadow-glow transition-smooth hover:scale-105 text-center animate-fade-in">
+            <div className="bg-gradient-card rounded-2xl p-8 shadow-card border border-primary/10 hover:border-primary/30 hover:shadow-neon transition-bounce hover:scale-105 text-center animate-fade-in">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <UserPlus className="w-8 h-8 text-primary" />
               </div>
@@ -86,7 +86,7 @@ const Festival2025 = () => {
               </Button>
             </div>
 
-            <div className="bg-card rounded-2xl p-8 shadow-festival hover:shadow-glow transition-smooth hover:scale-105 text-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="bg-gradient-card rounded-2xl p-8 shadow-card border border-secondary/10 hover:border-secondary/30 hover:shadow-[0_0_20px_rgba(255,140,0,0.4)] transition-bounce hover:scale-105 text-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-secondary" />
               </div>
@@ -99,7 +99,7 @@ const Festival2025 = () => {
               </Button>
             </div>
 
-            <div className="bg-card rounded-2xl p-8 shadow-festival hover:shadow-glow transition-smooth hover:scale-105 text-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div className="bg-gradient-card rounded-2xl p-8 shadow-card border border-accent/10 hover:border-accent/30 hover:shadow-[0_0_20px_rgba(255,220,0,0.4)] transition-bounce hover:scale-105 text-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
                 <Building2 className="w-8 h-8 text-accent" />
               </div>

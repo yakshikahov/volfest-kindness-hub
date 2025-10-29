@@ -10,17 +10,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="bg-gradient-dark border-t border-primary/20 py-16 relative overflow-hidden">
+      {/* Glow Effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <img 
               src={logo} 
               alt="VolFest Logo" 
-              className="h-20 md:h-24 w-auto mx-auto mb-6 invert brightness-0"
+              className="h-20 md:h-24 w-auto mx-auto mb-6 drop-shadow-[0_0_30px_rgba(236,72,153,0.5)] hover:scale-105 transition-bounce"
             />
-            <h3 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-              Be part of the celebration of kindness
+            <h3 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Be part of the <span className="text-gradient">celebration of kindness</span>
             </h3>
             <p className="text-xl mb-8 opacity-90">
               Together, we believe in doing good.
@@ -37,17 +39,17 @@ const Footer = () => {
             <Button 
               variant="outline" 
               onClick={() => scrollToSection("partner")}
-              className="border-background text-background hover:bg-background/10"
+              className="border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary transition-bounce"
             >
               Partner With Us
             </Button>
           </div>
 
-          <div className="border-t border-background/20 pt-8">
-            <p className="text-sm opacity-75 mb-2">
-              Organized by <span className="font-bold">Humans of Volunteering</span>
+          <div className="border-t border-primary/20 pt-8">
+            <p className="text-sm text-muted-foreground mb-2">
+              Organized by <span className="font-bold text-primary">Humans of Volunteering</span>
             </p>
-            <p className="text-sm opacity-75">
+            <p className="text-sm text-muted-foreground">
               © 2025 VolFest. All rights reserved. | Celebrating kindness since 2022
             </p>
           </div>

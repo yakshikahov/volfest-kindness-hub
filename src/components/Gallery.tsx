@@ -38,13 +38,13 @@ const Gallery = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="rounded-2xl overflow-hidden shadow-festival hover:shadow-glow transition-smooth hover:scale-105 animate-fade-in"
+                className="rounded-2xl overflow-hidden shadow-card hover:shadow-neon transition-bounce hover:scale-105 animate-fade-in border border-primary/10 hover:border-primary/30"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-64 object-cover hover:scale-110 transition-smooth"
+                  className="w-full h-64 object-cover hover:scale-110 transition-smooth brightness-90 hover:brightness-100"
                 />
               </div>
             ))}
@@ -59,7 +59,7 @@ const Gallery = () => {
                 href="https://www.youtube.com/watch?v=Ap7lUBklc_g" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-primary/10 hover:bg-primary/20 rounded-full text-primary font-medium transition-smooth"
+                className="px-6 py-3 bg-primary/10 hover:bg-primary/20 rounded-full text-primary font-medium transition-bounce border border-primary/30 hover:border-primary hover:shadow-neon"
               >
                 ▶️ VolFest 2025 Aftermovie
               </a>
@@ -67,7 +67,7 @@ const Gallery = () => {
                 href="https://www.youtube.com/watch?v=Kifly31lP9k" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-secondary/10 hover:bg-secondary/20 rounded-full text-secondary font-medium transition-smooth"
+                className="px-6 py-3 bg-secondary/10 hover:bg-secondary/20 rounded-full text-secondary font-medium transition-bounce border border-secondary/30 hover:border-secondary hover:shadow-[0_0_20px_rgba(255,140,0,0.4)]"
               >
                 ▶️ VolFest 2024 Aftermovie
               </a>
@@ -75,7 +75,7 @@ const Gallery = () => {
                 href="https://img1.wsimg.com/blobby/go/667a94a2-24b1-48b1-a49d-1475281cc697/VolFest%20In%20a%20PDF.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-accent/10 hover:bg-accent/20 rounded-full text-accent font-medium transition-smooth"
+                className="px-6 py-3 bg-accent/10 hover:bg-accent/20 rounded-full text-accent font-medium transition-bounce border border-accent/30 hover:border-accent hover:shadow-[0_0_20px_rgba(255,220,0,0.4)]"
               >
                 📄 VolFest'24 Report (PDF)
               </a>

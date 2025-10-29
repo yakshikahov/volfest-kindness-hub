@@ -21,7 +21,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 gradient-subtle">
+    <section id="about" className="py-20 md:py-32 bg-card/50 relative overflow-hidden glow-effect">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
@@ -37,7 +37,7 @@ const About = () => {
         </div>
 
         {/* Unity Image */}
-        <div className="max-w-3xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-festival animate-scale-in">
+        <div className="max-w-3xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-card border border-primary/20 hover:border-primary/40 transition-smooth animate-scale-in">
           <img 
             src={unityImage} 
             alt="Hands coming together in unity" 
@@ -61,7 +61,7 @@ const About = () => {
             return (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-8 shadow-festival hover:shadow-glow transition-smooth hover:scale-105 animate-fade-in"
+                className="bg-gradient-card rounded-2xl p-8 shadow-card border border-primary/10 hover:border-primary/30 hover:shadow-neon transition-bounce hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="w-16 h-16 rounded-full gradient-festival flex items-center justify-center mb-6 mx-auto">

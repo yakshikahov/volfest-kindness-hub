@@ -26,9 +26,9 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
-    { icon: Globe, label: "Website", href: "#" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/humansofvolunteering/" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/humans-of-volunteering" },
+    { icon: Globe, label: "Website", href: "https://humansofvolunteering.com/" },
   ];
 
   return (
@@ -56,7 +56,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">contact@volfest.in</p>
+                      <p className="text-muted-foreground">humansofvolunteering123@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -80,7 +80,7 @@ const Contact = () => {
                       <a
                         key={index}
                         href={social.href}
-                        className="w-12 h-12 rounded-full bg-card shadow-festival hover:shadow-glow flex items-center justify-center transition-smooth hover:scale-110"
+                        className="w-12 h-12 rounded-full bg-gradient-card shadow-festival hover:shadow-neon flex items-center justify-center transition-bounce hover:scale-125"
                         aria-label={social.label}
                       >
                         <Icon className="w-6 h-6 text-primary" />
@@ -90,7 +90,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-card rounded-2xl p-6 shadow-festival">
+              <div className="bg-gradient-card rounded-2xl p-6 shadow-card border border-primary/20">
                 <p className="text-foreground font-medium mb-2">
                   "Together, we believe in doing good."
                 </p>
@@ -101,14 +101,16 @@ const Contact = () => {
             </div>
 
             {/* Luma Registration */}
-            <div className="bg-card rounded-3xl p-8 shadow-festival animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <h3 className="font-heading text-2xl font-bold mb-6">Register on Luma</h3>
+            <div className="bg-gradient-card rounded-3xl p-8 shadow-card border border-primary/20 animate-fade-in glow-effect" style={{ animationDelay: "0.2s" }}>
+              <h3 className="font-heading text-2xl font-bold mb-6">
+                🎉 Register for <span className="text-gradient">VolFest 2025</span>
+              </h3>
               <iframe 
                 src="https://lu.ma/embed/event/evt-d7T2CqS6okPMXby/simple" 
                 width="100%" 
                 height="600" 
                 frameBorder="0"
-                className="rounded-xl"
+                className="rounded-xl bg-background/50"
               ></iframe>
             </div>
           </div>

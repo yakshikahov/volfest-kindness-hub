@@ -34,8 +34,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-xl shadow-glow border-b border-primary/20"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -47,7 +49,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="VolFest - India's Volunteering Festival" 
-              className="h-12 md:h-14 w-auto transition-smooth hover:scale-105"
+              className="h-12 md:h-14 w-auto transition-bounce hover:scale-110 drop-shadow-[0_0_20px_rgba(236,72,153,0.3)]"
             />
           </button>
 
@@ -57,12 +59,12 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-primary transition-smooth font-medium"
+                className="text-foreground hover:text-primary transition-smooth font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-gradient-festival after:transition-all after:duration-300"
               >
                 {link.label}
               </button>
             ))}
-            <Button variant="festival" onClick={() => scrollToSection("contact")}>
+            <Button variant="festival" onClick={() => scrollToSection("contact")} className="animate-pulse-glow">
               Register Now
             </Button>
           </div>
@@ -89,7 +91,7 @@ const Navbar = () => {
                   {link.label}
                 </button>
               ))}
-              <Button variant="festival" onClick={() => scrollToSection("contact")} className="w-full">
+              <Button variant="festival" onClick={() => scrollToSection("contact")} className="w-full animate-pulse-glow">
                 Register Now
               </Button>
             </div>
