@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Festival2025 from "@/components/Festival2025";
+import Festival2026 from "@/components/Festival2026";
 import Highlights from "@/components/Highlights";
 import Partner from "@/components/Partner";
 import Gallery from "@/components/Gallery";
@@ -14,7 +14,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
-      <Festival2025 />
+      <Festival2026 />
       <Highlights />
       <Partner />
       <Gallery />

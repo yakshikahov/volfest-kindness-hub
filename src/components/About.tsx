@@ -31,8 +31,8 @@ const About = () => {
             VolFest is India's festival that celebrates volunteering
           </p>
           <p className="text-lg md:text-xl text-foreground leading-relaxed">
-            We believe doing good is not an act, but a culture. Every edition brings together people 
-            who choose kindness as their way of life.
+            We believe doing good is not an act, but a culture. After 3 successful editions in 2023, 2024, and 2025, 
+            we bring together people who choose kindness as their way of life.
           </p>
         </div>
 

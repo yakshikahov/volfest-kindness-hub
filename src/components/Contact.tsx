@@ -40,7 +40,7 @@ const Contact = () => {
               Join the <span className="text-gradient">Celebration</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Be part of the celebration of kindness! Register now for VolFest 2025.
+              Be part of the celebration of kindness! Register now for VolFest 2026.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ const Contact = () => {
             {/* Luma Registration */}
             <div className="bg-gradient-card rounded-3xl p-8 shadow-card border border-primary/20 animate-fade-in glow-effect" style={{ animationDelay: "0.2s" }}>
               <h3 className="font-heading text-2xl font-bold mb-6">
-                🎉 Register for <span className="text-gradient">VolFest 2025</span>
+                🎉 Register for <span className="text-gradient">VolFest 2026</span>
               </h3>
               <iframe 
                 src="https://lu.ma/embed/event/evt-d7T2CqS6okPMXby/simple" 

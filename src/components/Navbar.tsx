@@ -27,7 +27,7 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "About", id: "about" },
-    { label: "Festival 2025", id: "festival" },
+    { label: "Festival 2026", id: "festival" },
     { label: "Highlights", id: "highlights" },
     { label: "Gallery", id: "gallery" },
     { label: "Partner With Us", id: "partner" },

@@ -56,20 +56,20 @@ const Gallery = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-8">
               <a 
-                href="https://www.youtube.com/watch?v=Ap7lUBklc_g" 
-                target="_blank" 
+                href="https://www.youtube.com/watch?v=Ap7lUBklc_g"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-primary/10 hover:bg-primary/20 rounded-full text-primary font-medium transition-bounce border border-primary/30 hover:border-primary hover:shadow-neon"
               >
-                ▶️ VolFest 2025 Aftermovie
+                ▶️ VolFest 2024 Aftermovie
               </a>
               <a 
-                href="https://www.youtube.com/watch?v=Kifly31lP9k" 
-                target="_blank" 
+                href="https://www.youtube.com/watch?v=Kifly31lP9k"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-secondary/10 hover:bg-secondary/20 rounded-full text-secondary font-medium transition-bounce border border-secondary/30 hover:border-secondary hover:shadow-[0_0_20px_rgba(255,140,0,0.4)]"
               >
-                ▶️ VolFest 2024 Aftermovie
+                ▶️ VolFest 2023 Aftermovie
               </a>
               <a 
                 href="https://img1.wsimg.com/blobby/go/667a94a2-24b1-48b1-a49d-1475281cc697/VolFest%20In%20a%20PDF.pdf" 

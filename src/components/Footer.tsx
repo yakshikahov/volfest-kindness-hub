@@ -55,7 +55,7 @@ const Footer = () => {
               Organized by <span className="font-bold text-primary">Humans of Volunteering</span>
             </p>
             <p className="text-sm text-muted-foreground">
-              © 2025 VolFest. All rights reserved. | Celebrating kindness since 2022
+              © 2026 VolFest. All rights reserved. | Celebrating kindness since 2023
             </p>
           </div>
         </div>

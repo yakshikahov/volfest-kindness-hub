@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Building2, UserPlus, Sparkles, Heart } from "lucide-react";
 import festivalImage from "@/assets/festival-stalls.jpg";
 
-const Festival2025 = () => {
+const Festival2026 = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -16,8 +16,11 @@ const Festival2025 = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              This Year at <span className="text-gradient">VolFest 2025</span>
+              This Year at <span className="text-gradient">VolFest 2026</span>
             </h2>
+            <p className="text-lg text-muted-foreground">
+              After 3 successful editions (2023, 2024, 2025), we're back bigger and better!
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -118,4 +121,4 @@ const Festival2025 = () => {
   );
 };
 
-export default Festival2025;
+export default Festival2026;
