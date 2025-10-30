@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/volfest-logo-final.png";
+import { useTheme } from "@/hooks/use-theme";
+import logo from "@/assets/volfest-logo-text.png";
+import iconLogo from "@/assets/volfest-icon.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,9 +30,8 @@ const Navbar = () => {
     { label: "About", id: "about" },
     { label: "Festival 2025", id: "festival" },
     { label: "Highlights", id: "highlights" },
-    { label: "Partner With Us", id: "partner" },
     { label: "Gallery", id: "gallery" },
-    { label: "Contact", id: "contact" },
+    { label: "Partner With Us", id: "partner" },
   ];
 
   return (
@@ -44,17 +46,22 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center"
+            className="flex items-center gap-3"
           >
+            <img 
+              src={iconLogo} 
+              alt="VolFest Icon" 
+              className="h-10 md:h-12 w-auto transition-bounce hover:scale-110 drop-shadow-[0_0_30px_rgba(236,72,153,0.5)] animate-float-slow"
+            />
             <img 
               src={logo} 
               alt="VolFest - India's Volunteering Festival" 
-              className="h-12 md:h-14 w-auto transition-bounce hover:scale-110 drop-shadow-[0_0_20px_rgba(236,72,153,0.3)]"
+              className="h-8 md:h-10 w-auto transition-bounce hover:scale-110 drop-shadow-[0_0_20px_rgba(236,72,153,0.3)]"
             />
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -64,18 +71,33 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
-            <Button variant="festival" onClick={() => scrollToSection("contact")} className="animate-pulse-glow">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-primary/20 transition-smooth"
+              title={`Switch to ${theme === "classic" ? "Vibrant" : "Classic"} theme`}
+            >
+              <Sparkles className={`w-5 h-5 ${theme === "vibrant" ? "text-primary animate-spin-slow" : "text-muted-foreground"}`} />
+            </button>
+            <Button variant="festival" size="lg" onClick={() => scrollToSection("contact")} className="animate-pulse-glow">
               Register Now
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-primary/20 transition-smooth"
+            >
+              <Sparkles className={`w-5 h-5 ${theme === "vibrant" ? "text-primary" : "text-muted-foreground"}`} />
+            </button>
+            <button
+              className="p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

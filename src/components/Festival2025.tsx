@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Building2, UserPlus } from "lucide-react";
+import { Calendar, MapPin, Building2, UserPlus, Sparkles, Heart } from "lucide-react";
 import festivalImage from "@/assets/festival-stalls.jpg";
 
 const Festival2025 = () => {
@@ -81,8 +81,8 @@ const Festival2025 = () => {
               <p className="text-muted-foreground mb-6">
                 Join us as an attendee and experience the joy of doing good
               </p>
-              <Button variant="default" onClick={() => scrollToSection("contact")} className="w-full">
-                Register as Participant
+              <Button variant="hero" onClick={() => scrollToSection("contact")} className="w-full animate-pulse-glow">
+                Register Now
               </Button>
             </div>
 
@@ -117,8 +117,5 @@ const Festival2025 = () => {
     </section>
   );
 };
-
-// Add missing import
-import { Sparkles, Heart } from "lucide-react";
 
 export default Festival2025;

@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Heart, Sparkles } from "lucide-react";
+import { Heart, Sparkles, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-volfest.jpg";
-import logo from "@/assets/volfest-logo-final.png";
+import logo from "@/assets/volfest-logo-text.png";
+import iconLogo from "@/assets/volfest-icon.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -22,14 +23,17 @@ const Hero = () => {
       </div>
 
       {/* Floating decorative elements */}
-      <div className="absolute top-20 left-10 animate-float">
-        <Heart className="w-12 h-12 text-primary opacity-30" fill="currentColor" />
+      <div className="absolute top-20 left-10 animate-float-slow">
+        <Heart className="w-12 h-12 text-primary opacity-40" fill="currentColor" />
       </div>
-      <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: "1s" }}>
-        <Sparkles className="w-16 h-16 text-secondary opacity-30" />
+      <div className="absolute top-40 right-20 animate-float-slow" style={{ animationDelay: "1s" }}>
+        <Sparkles className="w-16 h-16 text-secondary opacity-40" />
       </div>
-      <div className="absolute bottom-40 left-20 animate-float" style={{ animationDelay: "2s" }}>
-        <Heart className="w-10 h-10 text-accent opacity-30" fill="currentColor" />
+      <div className="absolute bottom-40 left-20 animate-float-slow" style={{ animationDelay: "2s" }}>
+        <MapPin className="w-14 h-14 text-accent opacity-40" fill="currentColor" />
+      </div>
+      <div className="absolute top-1/2 right-10 animate-float-slow" style={{ animationDelay: "3s" }}>
+        <img src={iconLogo} alt="" className="w-16 h-16 opacity-20" />
       </div>
 
       {/* Content */}
@@ -40,11 +44,16 @@ const Hero = () => {
           </p>
           
           {/* Logo */}
-          <div className="mb-8 animate-scale-in">
+          <div className="mb-8 animate-scale-in flex items-center justify-center gap-6">
+            <img 
+              src={iconLogo} 
+              alt="VolFest Icon" 
+              className="h-20 md:h-28 lg:h-36 w-auto animate-float-slow drop-shadow-[0_0_50px_rgba(236,72,153,0.6)]"
+            />
             <img 
               src={logo} 
               alt="VolFest - India's Volunteering Festival" 
-              className="h-24 md:h-32 lg:h-40 w-auto mx-auto"
+              className="h-16 md:h-24 lg:h-32 w-auto drop-shadow-[0_0_30px_rgba(236,72,153,0.5)]"
             />
           </div>
           
@@ -62,17 +71,9 @@ const Hero = () => {
               variant="hero" 
               size="lg"
               onClick={() => scrollToSection("contact")}
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto animate-pulse-glow text-lg"
             >
               Register Now
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => scrollToSection("partner")}
-              className="w-full sm:w-auto"
-            >
-              Partner With Us
             </Button>
             <Button 
               variant="secondary" 
@@ -81,6 +82,14 @@ const Hero = () => {
               className="w-full sm:w-auto"
             >
               See Highlights
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => scrollToSection("partner")}
+              className="w-full sm:w-auto"
+            >
+              Partner With Us
             </Button>
           </div>
 
