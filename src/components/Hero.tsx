@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-volfest.jpg";
-import logo from "@/assets/volfest-logo-text.png";
-import iconLogo from "@/assets/volfest-icon.png";
+import logo from "@/assets/volfest-logo-main.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -33,7 +32,7 @@ const Hero = () => {
         <MapPin className="w-14 h-14 text-accent opacity-40" fill="currentColor" />
       </div>
       <div className="absolute top-1/2 right-10 animate-float-slow" style={{ animationDelay: "3s" }}>
-        <img src={iconLogo} alt="" className="w-16 h-16 opacity-20" />
+        <Heart className="w-10 h-10 text-primary opacity-30" fill="currentColor" />
       </div>
 
       {/* Content */}
@@ -44,16 +43,11 @@ const Hero = () => {
           </p>
           
           {/* Logo */}
-          <div className="mb-8 animate-scale-in flex items-center justify-center gap-6">
-            <img 
-              src={iconLogo} 
-              alt="VolFest Icon" 
-              className="h-20 md:h-28 lg:h-36 w-auto animate-float-slow drop-shadow-[0_0_50px_rgba(236,72,153,0.6)]"
-            />
+          <div className="mb-8 animate-scale-in">
             <img 
               src={logo} 
               alt="VolFest - India's Volunteering Festival" 
-              className="h-16 md:h-24 lg:h-32 w-auto drop-shadow-[0_0_30px_rgba(236,72,153,0.5)]"
+              className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-[0_0_50px_rgba(236,72,153,0.6)]"
             />
           </div>
           

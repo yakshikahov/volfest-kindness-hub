@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/use-theme";
-import logo from "@/assets/volfest-logo-text.png";
-import iconLogo from "@/assets/volfest-icon.png";
+import logo from "@/assets/volfest-logo-main.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,17 +45,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-3"
+            className="flex items-center"
           >
-            <img 
-              src={iconLogo} 
-              alt="VolFest Icon" 
-              className="h-10 md:h-12 w-auto transition-bounce hover:scale-110 drop-shadow-[0_0_30px_rgba(236,72,153,0.5)] animate-float-slow"
-            />
             <img 
               src={logo} 
               alt="VolFest - India's Volunteering Festival" 
-              className="h-8 md:h-10 w-auto transition-bounce hover:scale-110 drop-shadow-[0_0_20px_rgba(236,72,153,0.3)]"
+              className="h-12 md:h-16 w-auto transition-bounce hover:scale-110 drop-shadow-[0_0_30px_rgba(236,72,153,0.5)]"
             />
           </button>
 

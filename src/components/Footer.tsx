@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/volfest-logo-text.png";
-import iconLogo from "@/assets/volfest-icon.png";
+import logo from "@/assets/volfest-logo-main.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -16,16 +15,11 @@ const Footer = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 flex items-center justify-center gap-4">
-            <img 
-              src={iconLogo} 
-              alt="VolFest Icon" 
-              className="h-16 md:h-20 w-auto animate-float-slow drop-shadow-[0_0_40px_rgba(236,72,153,0.6)] hover:scale-105 transition-bounce"
-            />
+          <div className="mb-8">
             <img 
               src={logo} 
               alt="VolFest Logo" 
-              className="h-14 md:h-18 w-auto mb-6 drop-shadow-[0_0_30px_rgba(236,72,153,0.5)] hover:scale-105 transition-bounce"
+              className="h-24 md:h-32 w-auto mx-auto mb-6 drop-shadow-[0_0_50px_rgba(236,72,153,0.6)] hover:scale-105 transition-bounce"
             />
           </div>
           <div className="mb-8">
