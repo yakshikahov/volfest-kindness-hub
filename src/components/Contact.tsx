@@ -1,30 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, Instagram, Linkedin, Globe } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    type: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Registration received!",
-      description: "Thank you for registering. We'll send you more details soon.",
-    });
-    setFormData({ name: "", email: "", phone: "", type: "", message: "" });
-  };
-
   const socialLinks = [
     { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/humansofvolunteering/" },
     { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/humans-of-volunteering" },
@@ -32,85 +8,87 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-card/30 relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              Join the <span className="text-gradient">Celebration</span>
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Join the Celebration
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Be part of the celebration of kindness! Register now for VolFest 2026.
+            <p className="text-lg text-muted-foreground">
+              Register now for VolFest 2026
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-8">
               <div>
-                <h3 className="font-heading text-2xl font-bold mb-6">Get in Touch</h3>
+                <h3 className="font-heading text-lg font-semibold mb-4 text-foreground">Get in Touch</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-primary" />
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Mail className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">humansofvolunteering123@gmail.com</p>
+                      <p className="text-sm font-medium text-foreground">Email</p>
+                      <p className="text-sm text-muted-foreground">humansofvolunteering123@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-secondary" />
+                    <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-secondary" />
                     </div>
                     <div>
-                      <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">+91 XXXXX XXXXX</p>
+                      <p className="text-sm font-medium text-foreground">Phone</p>
+                      <p className="text-sm text-muted-foreground">+91 XXXXX XXXXX</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-heading text-2xl font-bold mb-6">Follow Us</h3>
-                <div className="flex gap-4">
+                <h3 className="font-heading text-lg font-semibold mb-4 text-foreground">Follow Us</h3>
+                <div className="flex gap-3">
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon;
                     return (
                       <a
                         key={index}
                         href={social.href}
-                        className="w-12 h-12 rounded-full bg-gradient-card shadow-festival hover:shadow-neon flex items-center justify-center transition-bounce hover:scale-125"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary/10 transition-smooth"
                         aria-label={social.label}
                       >
-                        <Icon className="w-6 h-6 text-primary" />
+                        <Icon className="w-5 h-5 text-muted-foreground hover:text-primary transition-smooth" />
                       </a>
                     );
                   })}
                 </div>
               </div>
 
-              <div className="bg-gradient-card rounded-2xl p-6 shadow-card border border-primary/20">
-                <p className="text-foreground font-medium mb-2">
+              <div className="bg-muted rounded-lg p-5">
+                <p className="text-foreground font-medium text-sm mb-1">
                   "Together, we believe in doing good."
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs text-muted-foreground">
                   — Humans of Volunteering
                 </p>
               </div>
             </div>
 
             {/* Luma Registration */}
-            <div className="bg-gradient-card rounded-3xl p-8 shadow-card border border-primary/20 animate-fade-in glow-effect" style={{ animationDelay: "0.2s" }}>
-              <h3 className="font-heading text-2xl font-bold mb-6">
-                🎉 Register for <span className="text-gradient">VolFest 2026</span>
+            <div className="bg-muted rounded-lg p-6">
+              <h3 className="font-heading text-lg font-semibold mb-4 text-foreground">
+                Register for VolFest 2026
               </h3>
               <iframe 
                 src="https://lu.ma/embed/event/evt-d7T2CqS6okPMXby/simple" 
                 width="100%" 
-                height="600" 
+                height="500" 
                 frameBorder="0"
-                className="rounded-xl bg-background/50"
+                className="rounded-lg bg-background"
               ></iframe>
             </div>
           </div>

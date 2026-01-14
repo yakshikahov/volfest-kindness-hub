@@ -1,4 +1,4 @@
-import { Heart, Users, Sparkles } from "lucide-react";
+import { Users, Mic2, Heart } from "lucide-react";
 import unityImage from "@/assets/unity-hands.jpg";
 
 const About = () => {
@@ -6,38 +6,38 @@ const About = () => {
     {
       icon: Users,
       title: "NGO Stalls",
-      description: "Connect with amazing nonprofits and explore volunteering opportunities",
+      description: "Connect with nonprofits and explore volunteering opportunities",
     },
     {
-      icon: Sparkles,
+      icon: Mic2,
       title: "Performances",
-      description: "Enjoy cultural performances celebrating the spirit of giving",
+      description: "Cultural performances celebrating the spirit of giving",
     },
     {
       icon: Heart,
       title: "Volunteering Arena",
-      description: "Hands-on volunteering experiences that make real impact",
+      description: "Hands-on experiences that create real community impact",
     },
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-card/50 relative overflow-hidden glow-effect">
+    <section id="about" className="py-20 md:py-28 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-            About <span className="text-gradient">VolFest</span>
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            About VolFest
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8">
-            VolFest is India's festival that celebrates volunteering
+          <p className="text-lg text-muted-foreground mb-6">
+            India's premier festival celebrating volunteering and community action
           </p>
-          <p className="text-lg md:text-xl text-foreground leading-relaxed">
-            We believe doing good is not an act, but a culture. After 3 successful editions in 2023, 2024, and 2025, 
-            we bring together people who choose kindness as their way of life.
+          <p className="text-base text-foreground leading-relaxed">
+            We believe doing good is not an act, but a culture. After 3 successful editions 
+            in 2023, 2024, and 2025, we bring together people who choose kindness as their way of life.
           </p>
         </div>
 
         {/* Unity Image */}
-        <div className="max-w-3xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-card border border-primary/20 hover:border-primary/40 transition-smooth animate-scale-in">
+        <div className="max-w-2xl mx-auto mb-16 rounded-lg overflow-hidden shadow-card">
           <img 
             src={unityImage} 
             alt="Hands coming together in unity" 
@@ -45,37 +45,33 @@ const About = () => {
           />
         </div>
 
-        {/* Components of VolFest */}
-        <div className="text-center mb-12">
-          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+        {/* Components */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="font-heading text-xl md:text-2xl font-semibold mb-8 text-center text-foreground">
             Components of VolFest
           </h3>
-          <p className="text-xl text-primary font-semibold">
-            Because kindness deserves a stage
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {components.map((component, index) => {
-            const Icon = component.icon;
-            return (
-              <div
-                key={index}
-                className="bg-gradient-card rounded-2xl p-8 shadow-card border border-primary/10 hover:border-primary/30 hover:shadow-neon transition-bounce hover:scale-105 animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="w-16 h-16 rounded-full gradient-festival flex items-center justify-center mb-6 mx-auto">
-                  <Icon className="w-8 h-8 text-primary-foreground" />
+          <div className="grid md:grid-cols-3 gap-6">
+            {components.map((component, index) => {
+              const Icon = component.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-background rounded-lg p-6 shadow-card border border-border hover:border-primary/30 transition-smooth"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h4 className="font-heading text-lg font-semibold mb-2 text-foreground">
+                    {component.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {component.description}
+                  </p>
                 </div>
-                <h4 className="font-heading text-xl font-bold mb-3 text-center">
-                  {component.title}
-                </h4>
-                <p className="text-muted-foreground text-center">
-                  {component.description}
-                </p>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
