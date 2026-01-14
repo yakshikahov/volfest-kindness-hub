@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Building2, Target, Users, Sparkles, Download } from "lucide-react";
+import { Building2, Target, Users, TrendingUp, Download } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import corporateImage from "@/assets/corporate-volunteers.jpg";
@@ -36,7 +36,7 @@ const Partner = () => {
       description: "Boost team morale and create lasting memories through hands-on community service",
     },
     {
-      icon: Sparkles,
+      icon: TrendingUp,
       title: "Brand Visibility",
       description: "Showcase your commitment to social good to thousands of engaged participants",
     },
@@ -48,21 +48,21 @@ const Partner = () => {
   ];
 
   return (
-    <section id="partner" className="py-20 md:py-32 bg-card/50 relative overflow-hidden glow-effect">
+    <section id="partner" className="py-20 md:py-28 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              Partner With <span className="text-gradient">VolFest</span>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Partner With VolFest
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Join us in creating a movement of doing good. VolFest partners gain meaningful visibility, 
-              community engagement opportunities, and a front-row seat to India's growing volunteering culture.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Join us in creating a movement of doing good. Gain meaningful visibility and 
+              community engagement opportunities.
             </p>
           </div>
 
           {/* Corporate Image */}
-          <div className="max-w-4xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-card border border-primary/20 hover:border-primary/40 transition-smooth animate-scale-in">
+          <div className="max-w-3xl mx-auto mb-12 rounded-lg overflow-hidden shadow-card">
             <img 
               src={corporateImage} 
               alt="Corporate volunteers team" 
@@ -71,22 +71,21 @@ const Partner = () => {
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-4 mb-12">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
                 <div
                   key={index}
-                  className="bg-gradient-card rounded-2xl p-8 shadow-card border border-primary/10 hover:border-primary/30 hover:shadow-neon transition-bounce hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="bg-background rounded-lg p-6 shadow-card border border-border hover:border-primary/30 transition-smooth"
                 >
-                  <div className="w-14 h-14 rounded-full gradient-festival flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-primary-foreground" />
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="font-heading text-2xl font-bold mb-3">
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">
                     {benefit.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground">
                     {benefit.description}
                   </p>
                 </div>
@@ -95,24 +94,24 @@ const Partner = () => {
           </div>
 
           {/* Partnership Inquiry Form */}
-          <div className="bg-gradient-card rounded-3xl p-8 md:p-12 shadow-card border border-primary/20 animate-fade-in">
+          <div className="bg-background rounded-lg p-8 shadow-card border border-border">
             <div className="text-center mb-8">
-              <h3 className="font-heading text-3xl font-bold mb-4">
+              <h3 className="font-heading text-xl font-semibold mb-3 text-foreground">
                 Let's Create Impact Together
               </h3>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-sm text-muted-foreground mb-4">
                 Ready to partner? Fill out the form below or download our partnership deck.
               </p>
-              <Button variant="outline" className="gap-2 border-primary/50 hover:border-primary hover:bg-primary/10 transition-bounce">
+              <Button variant="outline" size="sm" className="gap-2">
                 <Download className="w-4 h-4" />
                 Download Partner Deck
               </Button>
             </div>
 
-            <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <label className="block text-sm font-medium mb-1.5 text-foreground">Name</label>
                   <Input
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -121,7 +120,7 @@ const Partner = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Organization</label>
+                  <label className="block text-sm font-medium mb-1.5 text-foreground">Organization</label>
                   <Input
                     value={formData.organization}
                     onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
@@ -132,7 +131,7 @@ const Partner = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
+                <label className="block text-sm font-medium mb-1.5 text-foreground">Email</label>
                 <Input
                   type="email"
                   value={formData.email}
@@ -143,17 +142,17 @@ const Partner = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">Message</label>
+                <label className="block text-sm font-medium mb-1.5 text-foreground">Message</label>
                 <Textarea
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Tell us about your organization and how you'd like to partner..."
-                  rows={5}
+                  placeholder="Tell us about your organization and partnership interest..."
+                  rows={4}
                   required
                 />
               </div>
 
-              <Button type="submit" variant="festival" className="w-full" size="lg">
+              <Button type="submit" className="w-full" size="lg">
                 Submit Partnership Inquiry
               </Button>
             </form>

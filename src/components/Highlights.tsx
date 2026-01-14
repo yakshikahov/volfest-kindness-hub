@@ -22,35 +22,34 @@ const Highlights = () => {
   ];
 
   return (
-    <section id="highlights" className="py-20 md:py-32 bg-background">
+    <section id="highlights" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-gradient">Highlights</span> from 2024
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Highlights from 2024
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Celebrating a year of kindness, connection, and community impact
             </p>
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
                 <div
                   key={index}
-                  className="bg-card rounded-2xl p-6 text-center shadow-festival hover:shadow-glow transition-smooth hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="bg-muted/50 rounded-lg p-5 text-center"
                 >
-                  <div className="w-12 h-12 rounded-full gradient-festival flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                    <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <div className="font-heading text-3xl font-bold text-primary mb-2">
+                  <div className="font-heading text-2xl font-bold text-foreground mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-muted-foreground font-medium">
+                  <div className="text-sm text-muted-foreground">
                     {stat.label}
                   </div>
                 </div>
@@ -59,36 +58,34 @@ const Highlights = () => {
           </div>
 
           {/* Image Gallery */}
-          <div className="grid md:grid-cols-2 gap-6 mb-16">
-            <div className="rounded-3xl overflow-hidden shadow-festival hover:shadow-glow transition-smooth animate-fade-in">
+          <div className="grid md:grid-cols-2 gap-4 mb-12">
+            <div className="rounded-lg overflow-hidden shadow-card">
               <img 
                 src={volunteersAction} 
                 alt="Volunteers planting trees together" 
-                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-festival hover:shadow-glow transition-smooth animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="rounded-lg overflow-hidden shadow-card">
               <img 
                 src={volunteersKids} 
                 alt="Volunteers with children" 
-                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
 
           {/* Testimonials */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-8 shadow-festival animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="bg-muted/50 rounded-lg p-6 border border-border"
               >
-                <div className="text-4xl text-primary mb-4">"</div>
-                <p className="text-lg text-foreground mb-6 leading-relaxed">
-                  {testimonial.quote}
+                <p className="text-foreground mb-4 leading-relaxed">
+                  "{testimonial.quote}"
                 </p>
-                <p className="text-muted-foreground font-medium">
+                <p className="text-sm text-muted-foreground font-medium">
                   — {testimonial.author}
                 </p>
               </div>
