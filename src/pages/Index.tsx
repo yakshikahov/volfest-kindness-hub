@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Festival2026 from "@/components/Festival2026";
 import Highlights from "@/components/Highlights";
+import PastPartners from "@/components/PastPartners";
+import DonateCTA from "@/components/DonateCTA";
 import Partner from "@/components/Partner";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
@@ -16,6 +18,8 @@ const Index = () => {
       <About />
       <Festival2026 />
       <Highlights />
+      <PastPartners />
+      <DonateCTA />
       <Partner />
       <Gallery />
       <Contact />

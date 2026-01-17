@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Building2, UserPlus, Heart } from "lucide-react";
+import { Calendar, MapPin, Building2, UserPlus, Heart, Mic2, HandHeart, BadgeDollarSign } from "lucide-react";
 import festivalImage from "@/assets/festival-stalls.jpg";
 
 const Festival2026 = () => {
@@ -74,8 +74,8 @@ const Festival2026 = () => {
             </div>
           </div>
 
-          {/* CTA Cards */}
-          <div className="grid md:grid-cols-3 gap-4">
+          {/* CTA Cards - Row 1 */}
+          <div className="grid md:grid-cols-3 gap-4 mb-4">
             <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-primary/30 transition-smooth text-center">
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <UserPlus className="w-6 h-6 text-primary" />
@@ -112,6 +112,48 @@ const Festival2026 = () => {
               </p>
               <Button variant="outline" onClick={() => scrollToSection("partner")} className="w-full">
                 Partner as Corporate
+              </Button>
+            </div>
+          </div>
+
+          {/* CTA Cards - Row 2 */}
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-primary/30 transition-smooth text-center">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <HandHeart className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Host a Volunteering Activity</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Organize an impactful activity during VolFest
+              </p>
+              <Button variant="outline" onClick={() => scrollToSection("contact")} className="w-full">
+                Host Activity
+              </Button>
+            </div>
+
+            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-secondary/30 transition-smooth text-center">
+              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                <Mic2 className="w-6 h-6 text-secondary" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Be a Performer</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Showcase your talent on our stage
+              </p>
+              <Button variant="secondary" onClick={() => scrollToSection("contact")} className="w-full">
+                Perform at VolFest
+              </Button>
+            </div>
+
+            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-accent/30 transition-smooth text-center">
+              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                <BadgeDollarSign className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Be a Sponsor</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Support the movement and gain visibility
+              </p>
+              <Button variant="outline" onClick={() => scrollToSection("contact")} className="w-full">
+                Sponsor VolFest
               </Button>
             </div>
           </div>
