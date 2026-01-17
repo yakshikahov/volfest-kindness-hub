@@ -74,14 +74,15 @@ const Festival2026 = () => {
             </div>
           </div>
 
-          {/* CTA Cards - Row 1 */}
-          <div className="grid md:grid-cols-3 gap-4 mb-4">
-            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-primary/30 transition-smooth text-center">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <UserPlus className="w-6 h-6 text-primary" />
+          {/* CTA Cards Grid */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1 - For Citizens */}
+            <div className="bg-card rounded-lg p-8 border border-border hover:border-primary/40 hover:shadow-md transition-all duration-200 text-center flex flex-col h-full">
+              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                <UserPlus className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">For Citizens</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Join us and experience the joy of doing good
               </p>
               <Button onClick={() => scrollToSection("contact")} className="w-full">
@@ -89,12 +90,13 @@ const Festival2026 = () => {
               </Button>
             </div>
 
-            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-secondary/30 transition-smooth text-center">
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-6 h-6 text-secondary" />
+            {/* Card 2 - For NGOs */}
+            <div className="bg-card rounded-lg p-8 border border-border hover:border-secondary/40 hover:shadow-md transition-all duration-200 text-center flex flex-col h-full">
+              <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center mx-auto mb-5">
+                <Heart className="w-7 h-7 text-secondary" />
               </div>
               <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">For NGOs</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Set up a stall and connect with volunteers
               </p>
               <Button variant="secondary" onClick={() => scrollToSection("contact")} className="w-full">
@@ -102,28 +104,27 @@ const Festival2026 = () => {
               </Button>
             </div>
 
-            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-accent/30 transition-smooth text-center">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-6 h-6 text-accent" />
+            {/* Card 3 - For Corporates */}
+            <div className="bg-card rounded-lg p-8 border border-border hover:border-accent/40 hover:shadow-md transition-all duration-200 text-center flex flex-col h-full">
+              <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-5">
+                <Building2 className="w-7 h-7 text-accent" />
               </div>
               <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">For Corporates</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Enable employee engagement and CSR impact
               </p>
               <Button variant="outline" onClick={() => scrollToSection("partner")} className="w-full">
                 Partner as Corporate
               </Button>
             </div>
-          </div>
 
-          {/* CTA Cards - Row 2 */}
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-primary/30 transition-smooth text-center">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <HandHeart className="w-6 h-6 text-primary" />
+            {/* Card 4 - Host Activity */}
+            <div className="bg-card rounded-lg p-8 border border-border hover:border-primary/40 hover:shadow-md transition-all duration-200 text-center flex flex-col h-full">
+              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                <HandHeart className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Host a Volunteering Activity</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Organize an impactful activity during VolFest
               </p>
               <Button variant="outline" onClick={() => scrollToSection("contact")} className="w-full">
@@ -131,12 +132,13 @@ const Festival2026 = () => {
               </Button>
             </div>
 
-            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-secondary/30 transition-smooth text-center">
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mx-auto mb-4">
-                <Mic2 className="w-6 h-6 text-secondary" />
+            {/* Card 5 - Be a Performer */}
+            <div className="bg-card rounded-lg p-8 border border-border hover:border-secondary/40 hover:shadow-md transition-all duration-200 text-center flex flex-col h-full">
+              <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center mx-auto mb-5">
+                <Mic2 className="w-7 h-7 text-secondary" />
               </div>
               <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Be a Performer</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Showcase your talent on our stage
               </p>
               <Button variant="secondary" onClick={() => scrollToSection("contact")} className="w-full">
@@ -144,12 +146,13 @@ const Festival2026 = () => {
               </Button>
             </div>
 
-            <div className="bg-muted/50 rounded-lg p-6 border border-border hover:border-accent/30 transition-smooth text-center">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                <BadgeDollarSign className="w-6 h-6 text-accent" />
+            {/* Card 6 - Be a Sponsor */}
+            <div className="bg-card rounded-lg p-8 border border-border hover:border-accent/40 hover:shadow-md transition-all duration-200 text-center flex flex-col h-full">
+              <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-5">
+                <BadgeDollarSign className="w-7 h-7 text-accent" />
               </div>
               <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Be a Sponsor</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Support the movement and gain visibility
               </p>
               <Button variant="outline" onClick={() => scrollToSection("contact")} className="w-full">
