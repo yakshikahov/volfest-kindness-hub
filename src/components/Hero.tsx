@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
           
           <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-6">
-            Believe in Doing Good
+            Believe in Doing Good!!
           </h2>
           
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
