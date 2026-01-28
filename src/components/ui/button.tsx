@@ -17,6 +17,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline hover:text-secondary",
         festival: "gradient-festival text-primary-foreground font-medium",
         hero: "bg-primary text-primary-foreground font-medium hover:bg-secondary",
+        accent: "bg-accent text-accent-foreground hover:bg-white hover:text-accent border border-accent",
       },
       size: {
         default: "h-10 px-5 py-2",
