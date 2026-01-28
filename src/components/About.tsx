@@ -1,10 +1,10 @@
-import { Users, Mic2, Heart } from "lucide-react";
+import { Store, Mic2, Heart } from "lucide-react";
 import unityImage from "@/assets/unity-hands.jpg";
 
 const About = () => {
   const components = [
     {
-      icon: Users,
+      icon: Store,
       title: "NGO Stalls",
       description: "Connect with nonprofits and explore volunteering opportunities",
     },
@@ -27,12 +27,11 @@ const About = () => {
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
             About VolFest
           </h2>
-          <p className="text-lg text-muted-foreground mb-6">
+          {/* <p className="text-lg text-muted-foreground mb-6">
             India's premier festival celebrating volunteering and community action
-          </p>
+          </p> */}
           <p className="text-base text-foreground leading-relaxed">
-            We believe doing good is not an act, but a culture. After 3 successful editions 
-            in 2023, 2024, and 2025, we bring together people who choose kindness as their way of life.
+            VolFest is an annual festival that celebrates compassion, unity, and the power of volunteering. Organized by Humans of Volunteering, it is a platform where people experience volunteering firsthand, connect with nonprofits, and take meaningful action for social good. In the last three years, VolFest has brought together 10,000+ participants and 80+ NGOs across communities.
           </p>
         </div>
 
@@ -45,7 +44,7 @@ const About = () => {
           />
         </div>
 
-        {/* Components */}
+        {/* Components
         <div className="max-w-4xl mx-auto">
           <h3 className="font-heading text-xl md:text-2xl font-semibold mb-8 text-center text-foreground">
             Components of VolFest
@@ -72,7 +71,7 @@ const About = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
