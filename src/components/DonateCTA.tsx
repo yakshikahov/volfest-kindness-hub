@@ -15,7 +15,10 @@ const DonateCTA = () => {
           </h2>
           
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Your contribution helps us bring more communities together, support NGOs, and create lasting impact. Every donation makes a difference.
+            We need you so that we can provide much to others. Your donation doesn’t fund “projects.” It fuels the heartbeat of what we do:
+            1. VolFest is completely free for everyone—no entry fees, no barriers. We believe volunteering should be accessible to all, and cost should never stand in the way of making a difference.
+            2. At HOV, we strive to make volunteering a national habit. That’s why VolFest, our annual flagship festival, isn’t about profit - it’s about celebrating the spirit of volunteering.
+            3. VolFest is brought to life by dedicated volunteers, but making it happen comes with operational costs. We rely on support to keep it running - so join us, be a part of the experience, and see every penny turn into impact!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -26,13 +29,13 @@ const DonateCTA = () => {
               Donate Now
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
-            <Button 
+            {/* <Button 
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white/10"
             >
               Learn How to Support
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

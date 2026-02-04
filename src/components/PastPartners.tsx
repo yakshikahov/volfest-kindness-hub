@@ -1,51 +1,79 @@
 import { useEffect, useState } from "react";
 
+/* -------------------- LOGO IMPORTS (VITE) -------------------- */
+
+// Featured partner logos (top 4 with description)
+const featuredModules = import.meta.glob(
+  "../assets/partners/partner/*.{png,jpg,jpeg,webp}",
+  { eager: true }
+);
+
+const featuredLogos = Object.values(featuredModules).map(
+  (mod) => mod.default
+);
+
+// NGO logos for carousel
+const ngoModules = import.meta.glob(
+  "../assets/partners/*.{png,jpg,jpeg,webp}",
+  { eager: true }
+);
+
+const ngoLogos = Object.values(ngoModules)
+  .map((mod) => mod.default)
+  // safety filter (ignore partner subfolder if ever matched)
+  .filter((path) => !path.includes("/partner/"));
+
+/* ------------------------------------------------------------ */
+
 const PastPartners = () => {
   const [sliderPosition, setSliderPosition] = useState(0);
 
   const featuredPartners = [
     {
       name: "Youth For India | SBI Foundation",
-      description: "Youth for India Fellowship stands as a beacon of rural empowerment. Through this program, fellows engage in grassroots development projects alongside NGOs, building networks across 20+ states of India.",
+      description:
+        "Youth for India Fellowship stands as a beacon of rural empowerment. Through this program, fellows engage in grassroots development projects alongside NGOs, building networks across 20+ states of India.",
     },
     {
       name: "iVolunteer",
-      description: "Beginning from 2001, iVolunteer now engages 17,000+ volunteers every year through a range of programs. iVolunteer delivers impact in 12 social development areas including education, health, and child welfare.",
+      description:
+        "Beginning from 2001, iVolunteer now engages 17,000+ volunteers every year through a range of programs. iVolunteer delivers impact in 12 social development areas including education, health, and child welfare.",
     },
     {
       name: "Indian School of Development Management",
-      description: "ISDM is a pioneering institution established to enable ecosystem shifts towards transformative change in society, committed to building leadership and management practices for the social sector.",
+      description:
+        "ISDM is a pioneering institution established to enable ecosystem shifts towards transformative change in society, committed to building leadership and management practices for the social sector.",
     },
     {
       name: "DonateKart",
-      description: "DonateKart is an India-based social enterprise that allows individuals to donate supplies needed to a charity instead of donating money, enabling direct product donations to charitable organizations.",
+      description:
+        "DonateKart is an India-based social enterprise that allows individuals to donate supplies needed to a charity instead of donating money, enabling direct product donations to charitable organizations.",
     },
   ];
 
-  const ngoPartners = [
-    "Maya Foundation",
-    "Teach For India",
-    "Goonj",
-    "FairGift",
-    "Smile Foundation",
-    "Robin Hood Army",
-    "Let's Do It India",
-    "Feeding India",
-  ];
+  const ITEM_WIDTH = 180; // px per logo card
 
+  /* -------------------- AUTO SLIDE -------------------- */
   useEffect(() => {
+    if (!ngoLogos.length) return;
+
     const interval = setInterval(() => {
-      setSliderPosition((prev) => (prev + 1) % ngoPartners.length);
-    }, 3000);
+      setSliderPosition((prev) => (prev + 1) % ngoLogos.length);
+    }, 2500);
+
     return () => clearInterval(interval);
-  }, [ngoPartners.length]);
+  }, []);
+
+  /* --------------------------------------------------- */
 
   return (
     <section id="past-partners" className="py-20 md:py-28 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
+
+          {/* ---------- HEADER ---------- */}
           <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
               Partners from the Past
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -53,21 +81,26 @@ const PastPartners = () => {
             </p>
           </div>
 
-          {/* Featured Partners Grid */}
+          {/* ---------- FEATURED PARTNERS ---------- */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {featuredPartners.map((partner, index) => (
               <div
                 key={index}
-                className="bg-background rounded-lg p-6 border border-border hover:border-primary/30 transition-smooth"
+                className="bg-background rounded-lg p-6 border border-border hover:border-primary/30 transition-all"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                    <span className="font-heading text-xl font-bold text-primary">
-                      {partner.name.charAt(0)}
-                    </span>
+                  <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center flex-shrink-0 overflow-hidden">
+                    {featuredLogos[index] && (
+                      <img
+                        src={featuredLogos[index]}
+                        alt={partner.name}
+                        className="w-full h-full object-contain"
+                      />
+                    )}
                   </div>
+
                   <div>
-                    <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">
+                    <h3 className="font-heading text-lg font-semibold mb-2">
                       {partner.name}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
@@ -79,37 +112,42 @@ const PastPartners = () => {
             ))}
           </div>
 
-          {/* NGO Partners Slider */}
+          {/* ---------- NGO CAROUSEL ---------- */}
           <div className="border-t border-border pt-12">
-            <h3 className="font-heading text-xl font-semibold text-center mb-8 text-foreground">
+            <h3 className="font-heading text-xl font-semibold text-center mb-4">
               NGO Partners from the Past
             </h3>
             <p className="text-center text-muted-foreground mb-8">
               Let's get to know them & how we can volunteer!
             </p>
-            
+
             <div className="relative overflow-hidden">
-              <div 
+              <div
                 className="flex gap-8 transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${sliderPosition * 150}px)` }}
+                style={{
+                  transform: `translateX(-${sliderPosition * ITEM_WIDTH}px)`,
+                }}
               >
-                {[...ngoPartners, ...ngoPartners].map((partner, index) => (
+                {[...ngoLogos, ...ngoLogos].map((logo, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-32 h-20 bg-background rounded-lg border border-border flex items-center justify-center p-4 hover:border-primary/30 transition-smooth"
+                    className="flex-shrink-0 w-[180px] h-[100px] bg-background rounded-lg border border-border flex items-center justify-center p-4 hover:border-primary/30 transition-all"
                   >
-                    <span className="font-medium text-sm text-center text-muted-foreground">
-                      {partner}
-                    </span>
+                    <img
+                      src={logo}
+                      alt={`ngo-${index}`}
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
                 ))}
               </div>
-              
-              {/* Gradient overlays */}
+
+              {/* gradient edges */}
               <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-muted/30 to-transparent pointer-events-none" />
               <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-muted/30 to-transparent pointer-events-none" />
             </div>
           </div>
+
         </div>
       </div>
     </section>

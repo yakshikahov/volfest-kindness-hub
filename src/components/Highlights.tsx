@@ -4,10 +4,10 @@ import volunteersKids from "@/assets/volunteers-kids.jpg";
 
 const Highlights = () => {
   const stats = [
-    { icon: Users, number: "5,500+", label: "Citizens" },
-    { icon: Building2, number: "40+", label: "NGOs" },
-    { icon: Heart, number: "1000s", label: "Smiles" },
-    { icon: Award, number: "3", label: "Years Strong" },
+    { icon: Users, number: "10,000+", label: "Citizens" },
+    { icon: Building2, number: "80+", label: "NGOs" },
+    { icon: Heart, number: "Unlimited", label: "Smiles" },
+    { icon: Award, number: "5", label: "Years Strong" },
   ];
 
   const testimonials = [
@@ -27,11 +27,11 @@ const Highlights = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Highlights from 2024
+              Highlights from the Past
             </h2>
-            <p className="text-lg text-muted-foreground">
+            {/* <p className="text-lg text-muted-foreground">
               Celebrating a year of kindness, connection, and community impact
-            </p>
+            </p> */}
           </div>
 
           {/* Stats Grid */}
@@ -58,7 +58,7 @@ const Highlights = () => {
           </div>
 
           {/* Image Gallery */}
-          <div className="grid md:grid-cols-2 gap-4 mb-12">
+          {/* <div className="grid md:grid-cols-2 gap-4 mb-12">
             <div className="rounded-lg overflow-hidden shadow-card">
               <img 
                 src={volunteersAction} 
@@ -73,10 +73,10 @@ const Highlights = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Testimonials */}
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -90,7 +90,7 @@ const Highlights = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

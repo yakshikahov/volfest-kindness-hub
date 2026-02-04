@@ -62,13 +62,13 @@ const Partner = () => {
           </div>
 
           {/* Corporate Image */}
-          <div className="max-w-3xl mx-auto mb-12 rounded-lg overflow-hidden shadow-card">
+          {/* <div className="max-w-3xl mx-auto mb-12 rounded-lg overflow-hidden shadow-card">
             <img 
               src={corporateImage} 
               alt="Corporate volunteers team" 
               className="w-full h-auto"
             />
-          </div>
+          </div> */}
 
           {/* Benefits Grid */}
           <div className="grid md:grid-cols-2 gap-4 mb-12">
@@ -102,10 +102,10 @@ const Partner = () => {
               <p className="text-sm text-muted-foreground mb-4">
                 Ready to partner? Fill out the form below or download our partnership deck.
               </p>
-              <Button variant="outline" size="sm" className="gap-2">
+              {/* <Button variant="outline" size="sm" className="gap-2">
                 <Download className="w-4 h-4" />
                 Download Partner Deck
-              </Button>
+              </Button> */}
             </div>
 
             <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4">

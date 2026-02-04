@@ -17,11 +17,11 @@ const Index = () => {
       <Hero />
       <About />
       <Festival2026 />
-      <Highlights />
       <PastPartners />
+      <Highlights />
+      <Gallery />
       <DonateCTA />
       <Partner />
-      <Gallery />
       <Contact />
       <Footer />
     </div>

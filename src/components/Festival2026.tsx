@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Building2, UserPlus, Heart, Mic2, HandHeart, BadgeDollarSign } from "lucide-react";
-import festivalImage from "@/assets/festival-stalls.jpg";
+import festivalImage from "@/assets/volfest2026.jpg";
 
 const Festival2026 = () => {
   const scrollToSection = (id: string) => {
