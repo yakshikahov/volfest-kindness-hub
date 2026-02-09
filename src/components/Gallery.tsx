@@ -178,16 +178,7 @@ const Gallery = () => {
                 VolFest 2025 Aftermovie
               </a>
               <a
-                href="https://www.youtube.com/watch?v=Kifly31lP9k"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary/10 hover:bg-secondary/20 rounded-lg text-secondary text-sm font-medium transition-all"
-              >
-                <Play className="w-4 h-4" />
-                VolFest 2024 Aftermovie
-              </a>
-              <a
-                href="https://img1.wsimg.com/blobby/go/667a94a2-24b1-48b1-a49d-1475281cc697/VolFest%20In%20a%20PDF.pdf"
+                href="https://www.canva.com/design/DAGk3Wn30HM/Ol9duYbx82C6n8qmfHw_zw/view?utm_content=DAGk3Wn30HM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9533022569"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent/10 hover:bg-accent/20 rounded-lg text-accent text-sm font-medium transition-all"
@@ -195,6 +186,15 @@ const Gallery = () => {
                 <FileText className="w-4 h-4" />
                 VolFest'25 Report
               </a>
+              <a
+                href="https://www.youtube.com/watch?v=Kifly31lP9k"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary/10 hover:bg-secondary/20 rounded-lg text-secondary text-sm font-medium transition-all"
+              >
+                <Play className="w-4 h-4" />
+                VolFest 2024 Aftermovie
+              </a>              
             </div>
           </div>
         </div>

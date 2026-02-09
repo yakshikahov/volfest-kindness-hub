@@ -21,7 +21,7 @@ const Footer = () => {
             />
           </div>
           
-          <h3 className="font-heading text-xl md:text-2xl font-semibold mb-3 text-foreground">
+          {/* <h3 className="font-heading text-xl md:text-2xl font-semibold mb-3 text-foreground">
             Be part of the celebration of kindness
           </h3>
           <p className="text-muted-foreground mb-8">
@@ -42,7 +42,7 @@ const Footer = () => {
             >
               Partner With Us
             </Button>
-          </div>
+          </div> */}
 
           <div className="border-t border-border pt-8">
             <p className="text-sm text-muted-foreground mb-1">

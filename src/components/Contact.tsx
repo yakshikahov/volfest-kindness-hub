@@ -17,9 +17,9 @@ const Contact = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-2 text-foreground">
               Join the Celebration
             </h2>
-            <p className="text-sm md:text-lg text-muted-foreground">
+            {/* <p className="text-sm md:text-lg text-muted-foreground">
               Register now for VolFest 2026
-            </p>
+            </p> */}
           </div>
 
           {/* Luma registration card - wider on large screens */}

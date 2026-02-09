@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-volfest.jpg";
-import logo from "@/assets/vf new logo.png";
+import logo from "@/assets/vf-logo-black.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
