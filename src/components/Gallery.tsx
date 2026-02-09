@@ -169,7 +169,7 @@ const Gallery = () => {
             </h3>
             <div className="flex flex-wrap gap-3 justify-center">
               <a
-                href="https://www.youtube.com/watch?v=Ap7lUBklc_g"
+                href="https://www.youtube.com/watch?v=Ap7lUBklc_g "
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 rounded-lg text-primary text-sm font-medium transition-all"

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Building2, UserPlus, Heart, Mic2, HandHeart, BadgeDollarSign } from "lucide-react";
-import festivalImage from "@/assets/volfest2026.jpg";
+import festivalImage from "@/assets/hero-volfest4.jpg";
 
 const Festival2026 = () => {
   const scrollToSection = (id: string) => {
@@ -86,7 +86,7 @@ const Festival2026 = () => {
               <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Set up an NGO stall to showcase your cause, programs, and impact. Connect directly with volunteers and build long-term engagement.
               </p>
-              <Button onClick={() => scrollToSection("contact")} className="w-full">
+              <Button  onClick={() => window.open("https://forms.gle/XXwgGuGWbCfJDdfw8", "_blank")} className="w-full">
                 Partner as an NGO
               </Button>
             </div>
@@ -100,7 +100,7 @@ const Festival2026 = () => {
               <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Design and host a structured, hands-on volunteering activity at the VolFest arena. Give participants a real-time experience of doing good.
               </p>
-              <Button variant="secondary" onClick={() => scrollToSection("contact")} className="w-full">
+              <Button variant="secondary"  onClick={() => window.open("https://forms.gle/8bdMF6FKHUUegvnu5", "_blank")} className="w-full">
                 Host an Activity
               </Button>
             </div>
@@ -142,7 +142,7 @@ const Festival2026 = () => {
               <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Use art, music, dance, or spoken word to highlight social causes. Perform pro-bono and inspire change through creativity.
               </p>
-              <Button variant="secondary" onClick={() => scrollToSection("contact")} className="w-full">
+              <Button variant="secondary"  onClick={() => window.open("https://forms.gle/K2HuKhQ1Akdk7Bcs5", "_blank")} className="w-full">
                 Perform at VolFest
               </Button>
             </div>

@@ -26,9 +26,9 @@ const Highlights = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            {/* <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Highlights from the Past
-            </h2>
+            </h2> */}
             {/* <p className="text-lg text-muted-foreground">
               Celebrating a year of kindness, connection, and community impact
             </p> */}

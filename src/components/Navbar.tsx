@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/volfest-logo-main.png";
+import logo from "@/assets/vf new logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
