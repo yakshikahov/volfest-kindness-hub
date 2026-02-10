@@ -11,7 +11,7 @@ const Festival2026 = () => {
   };
 
   return (
-    <section id="festival" className="py-20 md:py-28 bg-background">
+    <section id="festival" className="py-20 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -128,7 +128,7 @@ const Festival2026 = () => {
               <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Share your volunteering journey and the impact you’ve created. Inspire others to step up and take action.
               </p>
-              <Button onClick={() => scrollToSection("contact")} className="w-full">
+              <Button onClick={() => window.open("https://forms.gle/qzuifUtr37Dcfd2W6", "_blank")} className="w-full">
                 Share Your Story
               </Button>
             </div>
@@ -156,7 +156,12 @@ const Festival2026 = () => {
               <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Support the volunteering movement while gaining visibility and reach. Help scale impact across communities.
               </p>
-              <Button variant="accent" onClick={() => scrollToSection("contact")} className="w-full">
+              <Button variant="accent" onClick={() => {
+                  const subject = "Interested to know more about VolFest!";
+                  const body = `Hi, I am ____ from _______ & I am interested to know more about VolFest 2026.\n\nThanks`;
+                  const mailto = `mailto:contact@humansofvolunteering.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                  window.location.href = mailto;
+              }} className="w-full">
                 Become a Sponsor
               </Button>
             </div>

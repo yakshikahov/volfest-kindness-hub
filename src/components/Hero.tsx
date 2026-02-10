@@ -22,54 +22,60 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center pt-20">
+      <div className="relative z-10 container mx-auto px-4 text-center pt-10">
         <div className="max-w-3xl mx-auto">
-          {/* Badge */}
-          {/* <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8">
-            <Calendar className="w-4 h-4" />
-            <span>India's Festival of Volunteering 2026</span>
-          </div> */}
-          
-          {/* Logo */}
-          <div className="mb-8">
+          {/* Logo (increased size) */}
+          <div className="mb-6">
             <img 
               src={logo} 
               alt="VolFest - India's Volunteering Festival" 
-              className="h-28 md:h-36 lg:h-44 w-auto mx-auto"
+              className="h-36 md:h-48 lg:h-56 w-auto mx-auto" 
+              style={{ filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.18))" }}
             />
           </div>
           
-          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+          {/* <h2 className="font-heading text-3xl md:text-4xl lg:text-4xl font-extrabold text-foreground mb-6">
             India's Volunteering Festival
-          </h2>
+          </h2> */}
           
-          <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
             VolFest is a celebration of volunteering that brings together citizens, nonprofits, and companies to do good-together. It turns volunteering into a festival with meaningful, well-designed action opportunities. From individual acts of kindness to large-scale collective impact, VolFest makes doing good joyful and visible.
           </p>
 
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8">
-            <Calendar className="w-4 h-4" />
-            <span>28th and 29th of March, 2026. Delhi</span>
+          {/* Date + Location: stacked vertically (always) */}
+          <div className="flex flex-col items-center gap-3 mb-8">
+            <div
+              role="group"
+              aria-label="Event date"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
+            >
+              <Calendar className="w-4 h-4" />
+              <span>28th and 29th of March, 2026</span>
+            </div>
+
+            {/* Location is now a clickable link to Google Maps */}
+            <a
+              href="https://maps.app.goo.gl/KvPzFBunH8RPtZah6"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Baansera Park location in Google Maps"
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition"
+            >
+              <MapPin className="w-4 h-4" />
+              <span>Baansera Park, Delhi</span>
+            </a>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12">
             <Button 
               size="lg"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => window.open("https://luma.com/l6vagn7q", "_blank")}
               className="w-full sm:w-auto gap-2"
             >
               Register Now
               <ArrowRight className="w-4 h-4" />
             </Button>
-            {/* <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => scrollToSection("about")}
-              className="w-full sm:w-auto"
-            >
-              Learn More
-            </Button> */}
           </div>
 
           {/* Quick Stats */}

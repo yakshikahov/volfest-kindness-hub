@@ -21,7 +21,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-muted/50">
+    <section id="about" className="py-20 md:py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -36,7 +36,7 @@ const About = () => {
         </div>
 
         {/* Unity Image */}
-        <div className="max-w-2xl mx-auto mb-16 rounded-lg overflow-hidden shadow-card">
+        <div className="max-w-3xl mx-auto mb-16 rounded-lg overflow-hidden">
           <img 
             src={unityImage} 
             alt="Hands coming together in unity" 

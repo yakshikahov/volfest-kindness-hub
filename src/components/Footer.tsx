@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/volfest-logo-main.png";
+import logo from "@/assets/vf-logo-black.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -10,14 +10,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-muted/50 border-t border-border py-16">
+    <footer className="bg-muted/50 border-t border-border py-10">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-8">
             <img 
               src={logo} 
               alt="VolFest Logo" 
-              className="h-16 md:h-20 w-auto mx-auto mb-6"
+              className="h-20 md:h-35 w-auto mx-auto mb-6"
             />
           </div>
           
@@ -49,7 +49,7 @@ const Footer = () => {
               Organized by <span className="font-medium text-foreground">Humans of Volunteering</span>
             </p>
             <p className="text-sm text-muted-foreground">
-              © 2026 VolFest. All rights reserved. | Celebrating kindness since 2023
+              © 2026 VolFest. All rights reserved. | Celebrating kindness since 2020
             </p>
           </div>
         </div>

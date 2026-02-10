@@ -30,6 +30,11 @@ const PastPartners = () => {
 
   const featuredPartners = [
     {
+      name: "Good Deeds Day",
+      description:
+        "Good Deeds Day is a global celebration of kindness in action - where millions of people across the world come together to do good, give back, and make a positive difference in their communities. It’s a reminder that every small act matters, and when we choose compassion, generosity, and action, we create ripples of change far beyond ourselves. On this day, doing good isn’t just encouraged—it’s celebrated. 💛",
+    },
+    {
       name: "Youth For India | SBI Foundation",
       description:
         "Youth for India Fellowship stands as a beacon of rural empowerment. Through this program, fellows engage in grassroots development projects alongside NGOs, building networks across 20+ states of India.",
@@ -83,13 +88,27 @@ const PastPartners = () => {
 
           {/* ---------- FEATURED PARTNERS ---------- */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {featuredPartners.map((partner, index) => (
+          {featuredPartners.map((partner, index) => {
+            const isMain = index === 0;
+          
+            return (
               <div
                 key={index}
-                className="bg-background rounded-lg p-6 border border-border hover:border-primary/30 transition-all"
+                className={`
+                  bg-background rounded-lg p-6 border transition-all
+                  ${isMain 
+                    ? "md:col-span-2 border-primary/40 shadow-md hover:shadow-lg" 
+                    : "border-border hover:border-primary/30"}
+                `}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  
+                  {/* Logo */}
+                  <div className={`
+                    ${isMain ? "w-20 h-20" : "w-16 h-16"}
+                    rounded-lg bg-muted flex items-center justify-center 
+                    flex-shrink-0 overflow-hidden
+                  `}>
                     {featuredLogos[index] && (
                       <img
                         src={featuredLogos[index]}
@@ -98,19 +117,29 @@ const PastPartners = () => {
                       />
                     )}
                   </div>
-
+                  
+                  {/* Content */}
                   <div>
-                    <h3 className="font-heading text-lg font-semibold mb-2">
+                    <h3 className={`
+                      font-heading font-semibold mb-2
+                      ${isMain ? "text-xl" : "text-lg"}
+                    `}>
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    
+                    <p className={`
+                      text-muted-foreground leading-relaxed
+                      ${isMain ? "text-base" : "text-sm"}
+                    `}>
                       {partner.description}
                     </p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
+
 
           {/* ---------- NGO CAROUSEL ---------- */}
           <div className="border-t border-border pt-12">
