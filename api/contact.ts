@@ -16,7 +16,7 @@ export default async function handler(
 
     await resend.emails.send({
       from: "Partnership <onboarding@resend.dev>", // we'll fix domain later
-      to: "contact@humansofvolunteering.com",
+      to: "yakshika.hov@gmail.com",
       subject: "New Partnership Inquiry",
       html: `
         <h2>New Partnership Inquiry</h2>
