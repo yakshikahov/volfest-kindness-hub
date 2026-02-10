@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-volfest.jpg";
 import logo from "@/assets/vf-logo-black.png";
+import { useCountUp } from "@/hooks/use-count-up";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -79,23 +80,33 @@ const Hero = () => {
           </div>
 
           {/* Quick Stats */}
-          <div className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-foreground text-lg">3</span>
-              <span>Successful Editions</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-foreground text-lg">80+</span>
-              <span>NGO Partners</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-foreground text-lg">10000+</span>
-              <span>Citizens Engaged</span>
-            </div>
-          </div>
+          <HeroStats />
         </div>
       </div>
     </section>
+  );
+};
+
+const HeroStats = () => {
+  const editions = useCountUp(3, 1500);
+  const ngos = useCountUp(80, 2000);
+  const citizens = useCountUp(10000, 2500);
+
+  return (
+    <div className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
+      <div className="flex items-center gap-2">
+        <span ref={editions.ref as React.RefObject<HTMLSpanElement>} className="font-bold text-foreground text-lg">{editions.count}</span>
+        <span>Successful Editions</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <span ref={ngos.ref as React.RefObject<HTMLSpanElement>} className="font-bold text-foreground text-lg">{ngos.count}+</span>
+        <span>NGO Partners</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <span ref={citizens.ref as React.RefObject<HTMLSpanElement>} className="font-bold text-foreground text-lg">{citizens.count.toLocaleString()}+</span>
+        <span>Citizens Engaged</span>
+      </div>
+    </div>
   );
 };
 

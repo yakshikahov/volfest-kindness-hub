@@ -1,13 +1,14 @@
 import { Users, Building2, Heart, Award } from "lucide-react";
 import volunteersAction from "@/assets/volunteers-action.jpg";
 import volunteersKids from "@/assets/volunteers-kids.jpg";
+import { useCountUp } from "@/hooks/use-count-up";
 
 const Highlights = () => {
   const stats = [
-    { icon: Users, number: "10,000+", label: "Citizens" },
-    { icon: Building2, number: "80+", label: "NGOs" },
-    { icon: Heart, number: "Unlimited", label: "Smiles" },
-    { icon: Award, number: "5", label: "Years Strong" },
+    { icon: Users, target: 10000, suffix: "+", label: "Citizens" },
+    { icon: Building2, target: 80, suffix: "+", label: "NGOs" },
+    { icon: Heart, target: null, suffix: "", label: "Smiles" },
+    { icon: Award, target: 5, suffix: "", label: "Years Strong" },
   ];
 
   const testimonials = [
@@ -36,25 +37,9 @@ const Highlights = () => {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-muted/50 rounded-lg p-5 text-center"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="font-heading text-2xl font-bold text-foreground mb-1">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </div>
-              );
-            })}
+            {stats.map((stat, index) => (
+              <CountUpCard key={index} icon={stat.icon} target={stat.target} suffix={stat.suffix} label={stat.label} />
+            ))}
           </div>
 
           {/* Image Gallery */}
@@ -94,6 +79,22 @@ const Highlights = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const CountUpCard = ({ icon: Icon, target, suffix, label }: { icon: any; target: number | null; suffix: string; label: string }) => {
+  const counter = useCountUp(target ?? 0, 2000);
+
+  return (
+    <div className="bg-muted/50 rounded-lg p-5 text-center">
+      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
+        <Icon className="w-5 h-5 text-primary" />
+      </div>
+      <div ref={counter.ref as React.RefObject<HTMLDivElement>} className="font-heading text-2xl font-bold text-foreground mb-1">
+        {target === null ? "Unlimited" : `${counter.count.toLocaleString()}${suffix}`}
+      </div>
+      <div className="text-sm text-muted-foreground">{label}</div>
+    </div>
   );
 };
 

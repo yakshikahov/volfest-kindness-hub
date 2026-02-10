@@ -16,21 +16,20 @@ const galleryModules = import.meta.glob(
 );
 
 const rawGallery = Object.entries(galleryModules).map(([path, mod]) => {
-  // create a friendly alt from filename
-  const filename = path.split("/").pop();
+  const filename = path.split("/").pop() || "";
   const name = filename.replace(/\.[^/.]+$/, "").replace(/[-_]/g, " ");
   const alt = name
     .split(" ")
     .map((w) => w[0]?.toUpperCase() + w.slice(1))
     .join(" ");
   return {
-    src: mod.default,
+    src: (mod as { default: string }).default,
     alt,
     filename,
   };
 });
 
-const computeSpan = (aspect, idx) => {
+const computeSpan = (aspect: number, idx: number) => {
   // aspect = width / height
   // default algorithm: tune these thresholds to your taste
   // Add slight variety based on index to avoid uniform patterns
@@ -57,7 +56,7 @@ const computeSpan = (aspect, idx) => {
 };
 
 const Gallery = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Array<{ src: string; alt: string; filename: string; aspect: number; colSpan: number; rowSpan: number; id: string }>>([]);
 
   // Build initial items (with src/alt) once — memo so path parsing is cheap
   const initial = useMemo(() => rawGallery, []);
@@ -67,7 +66,7 @@ const Gallery = () => {
     let mounted = true;
     const promises = initial.map(
       (imgObj, idx) =>
-        new Promise((resolve) => {
+        new Promise<{ src: string; alt: string; filename: string; aspect: number; colSpan: number; rowSpan: number }>((resolve) => {
           const img = new Image();
           img.onload = () => {
             const aspect = img.naturalWidth / img.naturalHeight || 1;
@@ -80,7 +79,6 @@ const Gallery = () => {
             });
           };
           img.onerror = () => {
-            // fallback spans if load fails
             resolve({
               ...imgObj,
               aspect: 1,
