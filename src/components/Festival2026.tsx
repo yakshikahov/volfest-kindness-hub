@@ -52,7 +52,7 @@ const Festival2026 = () => {
                 <div>
                   <h3 className="font-heading text-lg font-semibold mb-1 text-foreground">Where</h3>
                   <p className="text-sm text-muted-foreground">
-                    Delhi, India — Location details coming soon
+                    Baansera Park, Delhi
                   </p>
                 </div>
               </div>

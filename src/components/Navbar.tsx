@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/vf-logo-pink.png";
+import logo from "@/assets/vf-logo-black.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,7 +76,7 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
-            <Button size="sm" onClick={() => scrollToSection("contact")}>
+            <Button size="sm" onClick={() => window.open("https://luma.com/l6vagn7q", "_blank")}>
               Register
             </Button>
           </div>
@@ -106,10 +106,7 @@ const Navbar = () => {
               ))}
               <Button
                 size="sm"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  scrollToSection("contact");
-                }}
+                onClick={() => window.open("https://luma.com/l6vagn7q", "_blank")}
                 className="mt-2"
               >
                 Register Now

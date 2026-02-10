@@ -40,9 +40,9 @@ const PastPartners = () => {
         "Youth for India Fellowship stands as a beacon of rural empowerment. Through this program, fellows engage in grassroots development projects alongside NGOs, building networks across 20+ states of India.",
     },
     {
-      name: "iVolunteer",
+      name: "DonateKart",
       description:
-        "Beginning from 2001, iVolunteer now engages 17,000+ volunteers every year through a range of programs. iVolunteer delivers impact in 12 social development areas including education, health, and child welfare.",
+        "DonateKart is an India-based social enterprise that allows individuals to donate supplies needed to a charity instead of donating money, enabling direct product donations to charitable organizations.",
     },
     {
       name: "Indian School of Development Management",
@@ -50,9 +50,9 @@ const PastPartners = () => {
         "ISDM is a pioneering institution established to enable ecosystem shifts towards transformative change in society, committed to building leadership and management practices for the social sector.",
     },
     {
-      name: "DonateKart",
+      name: "iVolunteer",
       description:
-        "DonateKart is an India-based social enterprise that allows individuals to donate supplies needed to a charity instead of donating money, enabling direct product donations to charitable organizations.",
+        "Beginning from 2001, iVolunteer now engages 17,000+ volunteers every year through a range of programs. iVolunteer delivers impact in 12 social development areas including education, health, and child welfare.",
     },
   ];
 
