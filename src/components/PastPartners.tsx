@@ -9,7 +9,7 @@ const featuredModules = import.meta.glob(
 );
 
 const featuredLogos = Object.values(featuredModules).map(
-  (mod) => mod.default
+  (mod) => (mod as { default: string }).default
 );
 
 // NGO logos for carousel
@@ -19,7 +19,7 @@ const ngoModules = import.meta.glob(
 );
 
 const ngoLogos = Object.values(ngoModules)
-  .map((mod) => mod.default)
+  .map((mod) => (mod as { default: string }).default)
   // safety filter (ignore partner subfolder if ever matched)
   .filter((path) => !path.includes("/partner/"));
 
