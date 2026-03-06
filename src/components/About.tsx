@@ -1,5 +1,5 @@
 import { Store, Mic2, Heart } from "lucide-react";
-import unityImage from "@/assets/unity-hands.png";
+import unityImage from "@/assets/unity-hands.webp";
 
 const About = () => {
   const components = [

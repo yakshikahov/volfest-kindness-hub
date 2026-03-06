@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
-import heroImage from "@/assets/hero-volfest.jpg";
+import heroImage from "@/assets/hero-volfest.webp";
 import logo from "@/assets/vf-logo-black.png";
 import { useCountUp } from "@/hooks/use-count-up";
 
