@@ -86,7 +86,7 @@ const Festival2026 = () => {
               <p className="text-sm text-muted-foreground mb-6 flex-grow">
                 Set up an NGO stall to showcase your cause, programs, and impact. Connect directly with volunteers and build long-term engagement.
               </p>
-              <Button  onClick={() => window.open("https://forms.gle/XXwgGuGWbCfJDdfw8", "_blank")} className="w-full">
+              <Button  onClick={() => window.open("https://forms.gle/26mxdnaKxEJ3vU9fA", "_blank")} className="w-full">
                 Partner as an NGO
               </Button>
             </div>
