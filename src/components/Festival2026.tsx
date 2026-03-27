@@ -75,6 +75,24 @@ const Festival2026 = () => {
             </div>
           </div>
 
+          {/* Guide Banner */}
+          <div className="mb-10 rounded-lg border border-primary/30 bg-primary/5 p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <MapPin className="w-6 h-6 text-primary" />
+            </div>
+            <div className="flex-grow">
+              <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
+                Looking forward to having you all at VolFest!
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Here's your guide to move around, engage and do good.
+              </p>
+            </div>
+            <Button onClick={() => window.open("https://canva.link/j6ekvbpr3fanr5x", "_blank")} className="flex-shrink-0">
+              View Guide
+            </Button>
+          </div>
+
           {/* CTA Cards Grid */}
           <div className="grid md:grid-cols-3 gap-6">
             {/* Card 1 - For NGOs */}
